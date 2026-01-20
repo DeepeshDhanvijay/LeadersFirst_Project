@@ -3,10 +3,11 @@ import { DatabaseService } from '@/lib/database'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await context.params
   try {
-    const website = await DatabaseService.getWebsite(params.id)
+    const website = await DatabaseService.getWebsite(id)
 
     if (!website) {
       return NextResponse.json(
@@ -30,10 +31,11 @@ export async function GET(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await context.params
   try {
-    const deleted = await DatabaseService.deleteWebsite(params.id)
+    const deleted = await DatabaseService.deleteWebsite(id)
 
     if (!deleted) {
       return NextResponse.json(
