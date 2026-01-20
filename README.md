@@ -2,6 +2,10 @@
 
 A modern AI-powered website generator that transforms natural language descriptions into fully functional, responsive websites using CodeLlama AI model.
 
+## 🌐 Live Demo
+
+**[https://leaders-first-project.vercel.app/](https://leaders-first-project.vercel.app/)**
+
 ![AI Website Generator](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
